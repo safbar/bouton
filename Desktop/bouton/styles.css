@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Empêche les barres de défilement */
+}
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+#movingButton {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#abandonButton {
+    position: absolute;
+    bottom: 20px; /* Positionner le bouton en bas de l'écran */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e74c3c; /* Couleur rouge pour le bouton d'abandon */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: none; /* Masquer le bouton au départ */
+}
+#message {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    display: none; /* Cacher le message par défaut */
+}
+#displayedImage {
+    position: absolute;
+    top: 50%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster le centrage */
+    display: none; /* Masquer l'image par défaut */
+    max-width: 90%; /* Limiter la taille de l'image */
+    max-height: 90%; /* Limiter la taille de l'image */
+}
